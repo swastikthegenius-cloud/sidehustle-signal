@@ -37,7 +37,9 @@
       </a>
       <nav aria-label="Primary">
         <a href="#ideas">Ideas</a>
+        <a href="#shortlist">Shortlist</a>
         <a href="#calculator">Calculator</a>
+        <a href="#growth">Growth</a>
         <a href="#playbook">Playbook</a>
       </nav>
     </header>
@@ -78,6 +80,28 @@
                 <option value="research">Research</option>
                 <option value="local">Local services</option>
                 <option value="automation">Automation</option>
+                <option value="teaching">Teaching</option>
+                <option value="commerce">Commerce</option>
+              </select>
+            </label>
+            <label>
+              Model
+              <select id="model">
+                <option value="all">Any model</option>
+                <option value="service">Service</option>
+                <option value="digital">Digital product</option>
+                <option value="content">Content</option>
+                <option value="local">Local</option>
+                <option value="marketplace">Marketplace</option>
+              </select>
+            </label>
+            <label>
+              Difficulty
+              <select id="difficulty">
+                <option value="all">Any difficulty</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="advanced">Advanced</option>
               </select>
             </label>
             <button type="button" id="shuffle">Surprise me</button>
@@ -91,15 +115,15 @@
       <section class="stats" aria-label="Site highlights">
         <article>
           <strong id="ideaCount">24</strong>
-          <span>curated ideas</span>
+          <span>matching ideas</span>
         </article>
         <article>
-          <strong>7 days</strong>
-          <span>launch plans</span>
+          <strong id="savedCount">0</strong>
+          <span>saved ideas</span>
         </article>
         <article>
-          <strong>$0+</strong>
-          <span>startup paths</span>
+          <strong>30 days</strong>
+          <span>growth sprint</span>
         </article>
       </section>
 
@@ -114,7 +138,31 @@
             <input id="search" type="search" placeholder="Try newsletter, Etsy, tutoring..." />
           </div>
         </div>
+        <div class="controls-row">
+          <label>
+            Sort by
+            <select id="sort">
+              <option value="score">Highest signal</option>
+              <option value="profit">Highest upside</option>
+              <option value="speed">Fastest launch</option>
+              <option value="cost">Lowest cost</option>
+            </select>
+          </label>
+          <button type="button" id="resetFilters">Reset filters</button>
+        </div>
         <div class="idea-grid" id="ideaGrid"></div>
+      </section>
+
+      <section class="section shortlist" id="shortlist" aria-labelledby="shortlist-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Your picks</p>
+            <h2 id="shortlist-title">Saved ideas to compare later</h2>
+          </div>
+        </div>
+        <div class="shortlist-panel" id="shortlistPanel">
+          <p>No saved ideas yet. Use the save button on any idea card.</p>
+        </div>
       </section>
 
       <section class="tool-band" id="calculator" aria-labelledby="calculator-title">
@@ -139,6 +187,33 @@
             <input id="costs" type="number" min="0" value="40" />
           </label>
           <output id="income">$1,080/mo</output>
+        </div>
+      </section>
+
+      <section class="section growth" id="growth" aria-labelledby="growth-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Traffic engine</p>
+            <h2 id="growth-title">30-day growth menu</h2>
+          </div>
+        </div>
+        <div class="growth-grid">
+          <article>
+            <strong>SEO pages</strong>
+            <p>Publish one page per audience: students, teachers, creators, local shops, job seekers, parents, and freelancers.</p>
+          </article>
+          <article>
+            <strong>Share hooks</strong>
+            <p>Turn each idea into a short post with cost, time, first customer, and realistic first-month math.</p>
+          </article>
+          <article>
+            <strong>Free tools</strong>
+            <p>Add calculators and templates around the top ideas so visitors have a reason to bookmark and share.</p>
+          </article>
+          <article>
+            <strong>Backlinks</strong>
+            <p>Submit useful niche pages to resource lists, startup communities, student groups, and creator newsletters.</p>
+          </article>
         </div>
       </section>
 

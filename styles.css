@@ -122,7 +122,7 @@ h2 {
 
 .finder {
   display: grid;
-  grid-template-columns: repeat(3, minmax(130px, 1fr)) auto;
+  grid-template-columns: repeat(5, minmax(120px, 1fr)) auto;
   gap: 10px;
   margin-top: 28px;
   padding: 10px;
@@ -217,6 +217,19 @@ button {
   margin-bottom: 28px;
 }
 
+.controls-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) 150px;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.controls-row button {
+  background: #ffffff;
+  color: var(--ink);
+}
+
 .search-wrap {
   width: min(100%, 340px);
 }
@@ -235,6 +248,29 @@ button {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.save-btn {
+  width: auto;
+  min-height: 36px;
+  padding: 0 12px;
+  border-color: var(--line);
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.82rem;
+}
+
+.save-btn.saved {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #fff;
 }
 
 .idea-card.featured {
@@ -297,6 +333,45 @@ button {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.shortlist {
+  background: #eef7ff;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.shortlist-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.shortlist-panel > p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.shortlist-panel article {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.shortlist-panel span {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.shortlist-panel button {
+  width: fit-content;
+  min-height: 36px;
+  padding: 0 12px;
+  background: var(--ink);
+  color: #fff;
+}
+
 .calculator {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -305,6 +380,31 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
+}
+
+.growth-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.growth-grid article {
+  min-height: 210px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.growth-grid strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+}
+
+.growth-grid p {
+  color: var(--muted);
+  line-height: 1.58;
 }
 
 .calculator label {
@@ -393,7 +493,9 @@ footer a {
 
   .finder,
   .idea-grid,
-  .calculator {
+  .calculator,
+  .shortlist-panel,
+  .growth-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -423,7 +525,10 @@ footer a {
   .finder,
   .idea-grid,
   .stats,
-  .calculator {
+  .calculator,
+  .controls-row,
+  .shortlist-panel,
+  .growth-grid {
     grid-template-columns: 1fr;
   }
 
