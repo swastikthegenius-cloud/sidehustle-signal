@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SideHustle Signal | Find low-cost online business ideas</title>
+    <meta
+      name="description"
+      content="Discover practical side hustle ideas by budget, time, skills, and demand. Compare startup cost, earning paths, launch steps, and difficulty."
+    />
+    <meta name="theme-color" content="#10231f" />
+    <meta property="og:title" content="SideHustle Signal" />
+    <meta
+      property="og:description"
+      content="A free idea finder for low-cost online businesses, weekend projects, and beginner-friendly side hustles."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/sidehustle-signal.svg" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "SideHustle Signal",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "description": "Discover practical side hustle ideas by budget, time, skills, and demand."
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="SideHustle Signal home">
+        <img src="/assets/favicon.svg" alt="" />
+        <span>SideHustle Signal</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#ideas">Ideas</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#playbook">Playbook</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Free niche finder</p>
+          <h1 id="hero-title">Pick a side hustle that fits your week, budget, and skills.</h1>
+          <p>
+            Filter realistic online business ideas, estimate monthly upside, and get a simple launch plan you can act on today.
+          </p>
+          <form class="finder" id="finder" aria-label="Idea finder filters">
+            <label>
+              Budget
+              <select id="budget">
+                <option value="all">Any budget</option>
+                <option value="0-50">$0 to $50</option>
+                <option value="50-250">$50 to $250</option>
+                <option value="250+">$250+</option>
+              </select>
+            </label>
+            <label>
+              Weekly time
+              <select id="time">
+                <option value="all">Any time</option>
+                <option value="2-4">2 to 4 hours</option>
+                <option value="5-8">5 to 8 hours</option>
+                <option value="9+">9+ hours</option>
+              </select>
+            </label>
+            <label>
+              Skill
+              <select id="skill">
+                <option value="all">Any skill</option>
+                <option value="writing">Writing</option>
+                <option value="design">Design</option>
+                <option value="research">Research</option>
+                <option value="local">Local services</option>
+                <option value="automation">Automation</option>
+              </select>
+            </label>
+            <button type="button" id="shuffle">Surprise me</button>
+          </form>
+        </div>
+        <figure class="hero-visual">
+          <img src="/assets/sidehustle-signal.svg" alt="Dashboard showing ranked side hustle ideas and launch signals" />
+        </figure>
+      </section>
+
+      <section class="stats" aria-label="Site highlights">
+        <article>
+          <strong id="ideaCount">24</strong>
+          <span>curated ideas</span>
+        </article>
+        <article>
+          <strong>7 days</strong>
+          <span>launch plans</span>
+        </article>
+        <article>
+          <strong>$0+</strong>
+          <span>startup paths</span>
+        </article>
+      </section>
+
+      <section class="section" id="ideas" aria-labelledby="ideas-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Ranked opportunities</p>
+            <h2 id="ideas-title">Side hustle ideas with demand signals</h2>
+          </div>
+          <div class="search-wrap">
+            <label for="search">Search ideas</label>
+            <input id="search" type="search" placeholder="Try newsletter, Etsy, tutoring..." />
+          </div>
+        </div>
+        <div class="idea-grid" id="ideaGrid"></div>
+      </section>
+
+      <section class="tool-band" id="calculator" aria-labelledby="calculator-title">
+        <div>
+          <p class="eyebrow">Reality check</p>
+          <h2 id="calculator-title">Monthly income calculator</h2>
+          <p>
+            Estimate the simple math behind an idea before you spend money on tools, courses, or inventory.
+          </p>
+        </div>
+        <div class="calculator">
+          <label>
+            Price per sale
+            <input id="price" type="number" min="1" value="35" />
+          </label>
+          <label>
+            Sales per week
+            <input id="sales" type="number" min="1" value="8" />
+          </label>
+          <label>
+            Monthly costs
+            <input id="costs" type="number" min="0" value="40" />
+          </label>
+          <output id="income">$1,080/mo</output>
+        </div>
+      </section>
+
+      <section class="section playbook" id="playbook" aria-labelledby="playbook-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Launch system</p>
+            <h2 id="playbook-title">A simple 7-day validation sprint</h2>
+          </div>
+        </div>
+        <ol class="steps">
+          <li><span>1</span><strong>Pick one buyer</strong><p>Choose a specific audience with a repeated pain, not a vague market.</p></li>
+          <li><span>2</span><strong>Write the promise</strong><p>Turn the idea into one clear outcome that can be delivered quickly.</p></li>
+          <li><span>3</span><strong>Build a proof page</strong><p>Create a one-page offer, portfolio sample, or demo before building the full business.</p></li>
+          <li><span>4</span><strong>Send 30 messages</strong><p>Ask for feedback, calls, or preorders in communities where the buyer already spends time.</p></li>
+          <li><span>5</span><strong>Track replies</strong><p>Keep the ideas that earn clicks, replies, saves, or small payments.</p></li>
+          <li><span>6</span><strong>Ship the smallest version</strong><p>Deliver manually first, then automate the parts that repeat.</p></li>
+          <li><span>7</span><strong>Publish the result</strong><p>Share screenshots, numbers, lessons, and a new offer with a clearer angle.</p></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>SideHustle Signal helps you compare ideas. It does not guarantee income or traffic.</p>
+      <a href="#hero-title">Back to top</a>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
